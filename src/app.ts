@@ -8,6 +8,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors())
+app.set('trust proxy', true);
 app.use(express.json());
 app.use(rateLimiter);
 app.use('/', urlRoutes);
