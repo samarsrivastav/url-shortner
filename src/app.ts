@@ -7,7 +7,6 @@ import { rateLimiter } from './middleware/rateLimiter';
 dotenv.config();
 
 const app = express();
-app.set('trust proxy', true);
 app.use(express.json());
 app.use(rateLimiter);
 app.use('/', urlRoutes);
